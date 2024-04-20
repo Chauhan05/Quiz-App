@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FFFAB7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizQuestionsActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        app:navigationIcon="@drawable/baseline_menu_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="@string/app_name"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="383dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/questionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="#4B0082"
+                android:text="What is 2*8"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#FFA500"
+                android:textSize="26sp"
+                android:minWidth="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.037" />
+
+            <ProgressBar
+                android:id="@+id/pBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintTop_toBottomOf="@id/questionTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:max="10"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_margin="20dp"
+                android:minHeight="30dp"
+                />
+            <TextView
+                android:id="@+id/pTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintHorizontal_weight="1"
+                android:text="0/10"
+                android:layout_marginEnd="4dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/questionTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:padding="8dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:background="@drawable/boundary_background"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/option2"
+                app:layout_constraintTop_toBottomOf="@id/pBar" />
+
+            <TextView
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="50dp"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:background="@drawable/boundary_background"
+                android:textColor="@color/black"
+                android:minWidth="150dp"
+                android:text="1"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/option3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option1" />
+
+            <TextView
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:minWidth="150dp"
+                android:textAlignment="center"
+                android:background="@drawable/boundary_background"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/option4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option2" />
+
+            <TextView
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:background="@drawable/boundary_background"
+                android:minWidth="150dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="NEXT"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D862BC"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

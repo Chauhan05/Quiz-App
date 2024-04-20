@@ -1,0 +1,8 @@
+<!-- boundary_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="rectangle"
+    tools:ignore="ExtraText">
+    <stroke android:width="4dp"
+        android:color="@color/red"/>
+</shape>
